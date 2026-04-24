@@ -14,7 +14,8 @@ resource "aws_instance" "demo" {
   key_name      = var.key_name
 
   root_block_device {
-    volume_size = var.volume_size
+    # Must be >= snapshot size (8 GB for Amazon Linux 2)
+    volume_size = max(var.volume_size, 8)
     volume_type = "gp2"
   }
 
@@ -22,3 +23,4 @@ resource "aws_instance" "demo" {
     Name = var.instance_name
   }
 }
+
