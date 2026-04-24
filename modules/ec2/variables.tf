@@ -13,5 +13,5 @@ variable "instance_name" {
 
 variable "volume_size" {
   type        = number
-  default     = 8
+  default     = 1
 }
