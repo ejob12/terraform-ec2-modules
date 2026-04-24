@@ -1,6 +1,6 @@
 provider "aws" {
   region  = "us-east-1"
-  allowed_account_ids = ["768477844960"]
+  allowed_account_ids = ["101257774115"]
 }
 
 module "ec2_demo" {
